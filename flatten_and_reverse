@@ -1,0 +1,25 @@
+--FLATTEN
+liste1 = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+liste2 = []
+def flatten(n):
+    for i in n :
+        if isinstance(i,list):
+            flatten(i)
+        else:
+            liste2.append(i)
+
+flatten(liste1)
+print(liste1)
+print(liste2)
+
+--REVERSE
+
+def dondur(liste):
+    liste.reverse()
+    for i in liste:
+        if type(i) == list:
+            dondur(i)
+liste = [[1, 2], [3, 4], [5, 6, 7]]
+dondur(liste)
+print(liste)
+
